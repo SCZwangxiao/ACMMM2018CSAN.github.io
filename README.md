@@ -1,2 +1,2 @@
 # ACMMM2018CSAN.github.io
-This site is for dataset releasing.
+This website is used for dataset releasing.
