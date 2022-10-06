@@ -2,7 +2,7 @@
 <!-- saved from url=(0043)http://www-personal.umich.edu/~ywchao/hico/ -->
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-<title>CSAN: Contextual Self-Attention Network</title>
+<title>Search-oriented Micro-video Captioning</title>
     <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
 
@@ -12,90 +12,24 @@
 <tbody><tr>
 <td>
 
+<!-- Title -->
 <center>
 <h1>
 <font face="helvetica" style="font-size:87%">
-    CSAN: Contextual Self-Attention Network
-<br>
-    for User Sequential Recommendation
+    Search-oriented Micro-video Captioning
 </font>
 </h1>
 </center>
 
 <br>
 
-<h2><font face="helvetica" style="font-size:24px">Introduction</font></h2>
-<hr style="margin-top:-10px; margin-bottom:13px">
-<font face="helvetica" style="font-size:18px">
-<p align="justify">
-   The sequential recommendation is an important task for online user-oriented services, 
-   such as purchasing products, watching videos, and social media consumption. 
-   Recent work usually used RNN-based methods to derive an overall embedding of the whole behavior sequence, 
-   which fails to discriminate the significance of individual user behaviors and thus decreases the recommendation performance. 
-   Besides, RNN-based encoding has fixed size and makes further recommendation application inefficient and inflexible. 
-   The online sequential behaviors of a user are generally heterogeneous, polysemous, and dynamically context-dependent. 
-   In this paper, we propose a unified Contextual Self-Attention Network (CSAN) 
-   to address the three properties. Heterogeneous user behaviors are considered in our model that are projected into a common latent semantic space. 
-   Then the output is fed into the feature-wise self-attention network to capture the polysemy of user behaviors. 
-   In addition, the forward and backward position encoding matrices are proposed to model dynamic contextual dependency. 
-   Through extensive experiments on two real-world datasets, we demonstrate the superior performance of the proposed model compared with other state-of-the-art algorithms.
-</p>
-
- <p>
- <b>Compared with existing sequential recommendation methods, the main contributions of our proposed CSAN can be summarized as follows:</b>
-</p>
-    <ol style="margin-top:-7px">
-    <li>We propose a novel contextual self-attention network for the sequential recommendation, which can leverage user historical behaviors in a more effective manner and have high computational efficiency.</li>
-    <li>We propose to employ embedding network, self-attention mechanism and position encoding to deal with the heterogeneity, polysemy, and dynamic contextual dependency of user sequential behaviors. This can accurately capture the user's interests and critical information for the sequential recommendation.</li>
-    <li>Extensive experimental results on both singe-type behavior dataset and multi-type multi-modal behavior dataset demonstrate the superior performance of the proposed model compared with other state-of-the-art algorithms. In addition, we introduce a multi-type and multi-modal behaviors dataset.</li>
-    </ol>
-
-</font>
-
-<p style="padding-bottom:1px"></p>
-
-
-<h2><font face="helvetica" style="font-size:24px">Motivation</font></h2>
-<hr style="margin-top:-10px; margin-bottom:13px">
-<font face="helvetica" style="font-size:15px">
-
-
-<h3>User behaviors are inherently heterogeneous, polysemous, and dynamically context-dependent:</h3>
-
-    <font face="helvetica" style="font-size:15px">
+<!-- Figure -->
 <center>
-    <img src="./CSAN/figs/introduction-new-eps-converted-to.png" height="500">
-    <br> <strong>Fig.1</strong> A schematic diagram of the behavior sequence of two users. Text describes the content topics of user actions at different timestamps. 
-	Red rectangles show the two users' different attentions on the same article due to their different contextual behaviors.
+<img src="./CSAN/figs/kwaiSVC-BG.jpg" height="350">
 </center>
-</font>
-    <br>
-<p style="padding-bottom:1px"></p>
 
 
-<h2><font face="helvetica" style="font-size:24px">Framework</font></h2>
-<hr style="margin-top:-10px; margin-bottom:13px">
-<font face="helvetica" style="font-size:15px">
-    <center>
-    <img src="./CSAN/figs/workflow-eps-converted-to.png" height="350">
-        <strong>Fig.2</strong> The schematic illustration of the sequence modeling architecture.
-    </center>
-<br>
-</font>
-
-    <h2><font face="helvetica" style="font-size:24px">Proposed Contextual Self-Attention Network</font></h2>
-    <hr style="margin-top:-10px; margin-bottom:13px">
-    <font face="helvetica" style="font-size:15px">
-        <center>
-            <img src="./CSAN/figs/approach-new-eps-converted-to.png" height="450">
-            <br>
-            <strong>Fig.3</strong> Illustration of the Contextual Self-Attention Network (CSAN) model.
-        </center>
-    </font>
-<p style="padding-bottom:1px"></p>
-
-
-
+<!-- Dataset -->
 <h2><font face="helvetica" style="font-size:24px">Dataset</font></h2>
 <hr style="margin-top:-10px; margin-bottom:13px">
 
@@ -103,72 +37,43 @@
 <font face="helvetica" style="font-size:15px">
 
 <div>
-<a href="" style="text-decoration: none;">
-<img src="./CSAN/figs/download_button.jpg" height="30px">
-</a>
-<div style="margin-left: 10px; margin-top: 20px; display: inline-block;">
-<a href="https://pan.baidu.com/s/1_QZnwb9w99XwGTTPbfAuyA">Zhihu Dataset (All_users)</a> 5.87 GB<br>
-    The dataset includes 17723 users' dynamic activities for one year. 
-</div>
+    <h2><font face="helvetica" style="font-size:20px">KwaiSVC-222k</font></h2>
+
+    <a href="" style="text-decoration: none;">
+    <img src="./CSAN/figs/download_button.jpg" height="30px">
+    </a>
+    <div style="margin-left: 10px; margin-top: 20px; display: inline-block;">
+        <a href="https://pan.baidu.com/s/1_QZnwb9w99XwGTTPbfAuyA">Baidu Cloud</a> 
+        &nbsp
+        <a href="https://pan.baidu.com/s/1_QZnwb9w99XwGTTPbfAuyA">Google Drive</a>
+        <br>
+        Golden dataset for divrse captioning. 
+    </div>
 </div>
 
 <br>
 
 <div>
-<a href="" style="text-decoration: none;">
-<img src="./CSAN/figs/download_button.jpg" height="30px">
-</a>
-<div style="margin-left: 10px; margin-top: 20px; display: inline-block;">
-<a href="https://pan.baidu.com/s/1jSzVpkmbGkWFPco6kML9Ow">Zhihu Dataset (Selected_users)</a> 5.47GB<br>
-    The dataset includes 10458 users' dynamic activities for one year.
-	These users are filtered. Each user contains more than 10 dynamic behaviors. 	
-</div>
-</div>
+    <h2><font face="helvetica" style="font-size:20px">KwaiSVC-11M</font></h2>
 
-<br>
-
-
-<!--
-<div>
-<ul style="padding-left: 16px">
-<li><a href="./MultimodalKnowledge/alltextualrelationships.txt">list of all relationships</a></li>
-    <!-- <li><a href="http://napoli18.eecs.umich.edu/public_html/data/hico_list_vb.txt">list of verbs</a></li>
-<li><a href="http://napoli18.eecs.umich.edu/public_html/data/hico_list_obj.txt">list of objects</a></li> -->
-
-<!--
-</ul>
-</div>
-
+    <a href="" style="text-decoration: none;">
+    <img src="./CSAN/figs/download_button.jpg" height="30px">
+    </a>
+    <div style="margin-left: 10px; margin-top: 20px; display: inline-block;">
+    <a href="https://pan.baidu.com/s/1jSzVpkmbGkWFPco6kML9Ow">KwaiSVC-11M</a> 
+    &nbsp
+    <a href="https://pan.baidu.com/s/1jSzVpkmbGkWFPco6kML9Ow">Google Drive</a>
     <br>
-    <table border="1" align="center">
-        <tr>
-            <th align="center" bgcolor=#F0F0F0>&nbsp;#Multi-modal relationships&nbsp;</th>
-            <th align="center" bgcolor=#F0F0F0>&nbsp;#Textual relationship instances&nbsp;<br></th>
-            <th align="center" bgcolor=#F0F0F0>&nbsp;#Visual relationship instances&nbsp;<br></th>
+        Dataset for multimodal video representation learning.	
+    </div>
+</div>
 
-        </tr>
-        <tr>
-            <td align="center">&nbsp;20726</td>
-            <td align="center">&nbsp;20726</td>
-            <td align="center">&nbsp;687784</td>
-
-        </tr>
-    </table>  		<br>
-	
-
-<!--<div style="margin-top: 20px">
-<p><b>Note:</b>
-</p><ol style="margin-top:-10px">
-<li>HICO and HICO-DET share the same set of HOI categories.</li>
-<li>HICO-DET is a superset of HICO in terms of the image set.</li>
-</ol>
-<p></p>
-</div>-->
+<br>
 
 
-
+<!-- Last Update -->
 <hr>
-<font face="helvetica" style="font-size:15px">Last updated on 2018/04/24</font>
+<font face="helvetica" style="font-size:15px">Last updated on 10/6/2022</font>
 </td>
 </tr>
 
